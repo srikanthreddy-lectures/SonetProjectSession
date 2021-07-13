@@ -13,7 +13,6 @@ import com.example.sonetprojectsession.data.User
 import com.example.sonetprojectsession.data.UserData
 import com.example.sonetprojectsession.databinding.FragmentListBinding
 import com.example.sonetprojectsession.utility.UserListAdapter
-import com.google.android.material.floatingactionbutton.FloatingActionButton
 
 class FragmentList:Fragment() {
     var userAdapter = UserListAdapter()
