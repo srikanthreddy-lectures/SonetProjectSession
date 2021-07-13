@@ -16,13 +16,11 @@ class UserListAdapter : RecyclerView.Adapter<UserListAdapter.UserViewHolder>() {
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): UserViewHolder {
-        Log.i("----->","onCreateViewHolder")
         return UserViewHolder(LayoutInflater.from(parent.context).inflate(R.layout.custom_row,parent,false))
     }
 
     override fun onBindViewHolder(holder: UserViewHolder, position: Int) {
         var currentPos = userList[position]
-        Log.i("----->onBindViewHolder",currentPos.toString())
         var id = holder.itemView.findViewById<TextView>(R.id.id_txt)
         id.text=currentPos.id.toString()
 
@@ -41,10 +39,8 @@ class UserListAdapter : RecyclerView.Adapter<UserListAdapter.UserViewHolder>() {
     }
 
     fun setUserData(user:List<User>){
-        Log.i("----->","setUserData")
         userList = user
         notifyDataSetChanged()
-        //Log.i("----->",userList.size.toString())
     }
 
 }
